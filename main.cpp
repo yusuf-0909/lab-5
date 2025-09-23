@@ -338,33 +338,43 @@ using namespace std;
 
 int main() {
     int today, elapseddays;
-    cout << "Enter today's day: ";
+    cout << "Enter today's day from 0-6, with Sunday being 0 and so on: ";
     cin >> today;
     cout << "Enter number of days elapsed since today: ";
     cin >> elapseddays;
 
-    int futureday = today + elapseddays;
+    int futureday = (today + elapseddays) % 7;
 
     switch (today) {
 
-        default: cout << "Invalid day?" << endl; break;
-        case 0:
-            cout << "Today is Sunday and the future day is ";
+        default: cout << "Invalid day" << endl; break;
+        case 0: cout << "Today is Sunday and the future day is "; break;
+        case 1: cout << "Today is Monday and the future day is "; break;
+        case 2: cout << "Today is Tuesday and the future day is "; break;
+        case 3: cout << "Today is Wednesday and the future day is "; break;
+        case 4: cout << "Today is Thursday and the future day is "; break;
+        case 5: cout << "Today is Friday and the future day is "; break;
+        case 6: cout << "Today is Saturday and the future day is "; break;
 
-        case 1: cout << "Today is Monday and the future day is ";
-        case 2: cout << "Today is Tuesday and the future day is ";
-        case 3: cout << "Today is Wednesday and the future day is ";
-        case 4: cout << "Today is Thursday and the future day is ";
-        case 5: cout << "Today is Friday and the future day is ";
-        case 6: cout << "Today is Saturday and the future day is ";
+    }
+    switch (futureday) {
+
+        default: cout << "Invalid day" << endl; break;
+        case 0: cout << "Sunday"; break;
+        case 1: cout << "Monday"; break;
+        case 2: cout << "Tuesday"; break;
+        case 3: cout << "Wednesday"; break;
+        case 4: cout << "Thursday"; break;
+        case 5: cout << "Friday"; break;
+        case 6: cout << "Saturday"; break;
 
     }
 }
 
 //problem 20
-
-int main() {
-
-
-
-}
+//
+// int main() {
+//
+//
+//
+// }
