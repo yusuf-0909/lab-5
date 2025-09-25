@@ -336,45 +336,419 @@ using namespace std;
 
 //problem 19 future dates
 
-int main() {
-    int today, elapseddays;
-    cout << "Enter today's day from 0-6, with Sunday being 0 and so on: ";
-    cin >> today;
-    cout << "Enter number of days elapsed since today: ";
-    cin >> elapseddays;
+// int main() {
+//     int today, elapseddays;
+//     cout << "Enter today's day from 0-6, with Sunday being 0 and so on: ";
+//     cin >> today;
+//     cout << "Enter number of days elapsed since today: ";
+//     cin >> elapseddays;
+//
+//     int futureday = (today + elapseddays) % 7;
+//
+//     switch (today) {
+//
+//         default: cout << "Invalid day" << endl; break;
+//         case 0: cout << "Today is Sunday and the future day is "; break;
+//         case 1: cout << "Today is Monday and the future day is "; break;
+//         case 2: cout << "Today is Tuesday and the future day is "; break;
+//         case 3: cout << "Today is Wednesday and the future day is "; break;
+//         case 4: cout << "Today is Thursday and the future day is "; break;
+//         case 5: cout << "Today is Friday and the future day is "; break;
+//         case 6: cout << "Today is Saturday and the future day is "; break;
+//
+//     }
+//     switch (futureday) {
+//
+//         default: cout << "Invalid day" << endl; break;
+//         case 0: cout << "Sunday"; break;
+//         case 1: cout << "Monday"; break;
+//         case 2: cout << "Tuesday"; break;
+//         case 3: cout << "Wednesday"; break;
+//         case 4: cout << "Thursday"; break;
+//         case 5: cout << "Friday"; break;
+//         case 6: cout << "Saturday"; break;
+//
+//     }
+// }
 
-    int futureday = (today + elapseddays) % 7;
+//problem 1
+// int main() {
+//
+//     for (int i = 1; i <= 10; i++) {
+//         cout << i<<" ";
+//     }
+//
+// }
 
-    switch (today) {
+//problem 2
 
-        default: cout << "Invalid day" << endl; break;
-        case 0: cout << "Today is Sunday and the future day is "; break;
-        case 1: cout << "Today is Monday and the future day is "; break;
-        case 2: cout << "Today is Tuesday and the future day is "; break;
-        case 3: cout << "Today is Wednesday and the future day is "; break;
-        case 4: cout << "Today is Thursday and the future day is "; break;
-        case 5: cout << "Today is Friday and the future day is "; break;
-        case 6: cout << "Today is Saturday and the future day is "; break;
+// int main() {
+//     int sum = 0;
+//     for (int i = 1; i <= 10; i++) {
+//         cout << i<<" ";
+//         sum += i;
+//     }
+//     cout << "\n"<<sum;
+//
+// }
 
-    }
-    switch (futureday) {
+//problem 3
 
-        default: cout << "Invalid day" << endl; break;
-        case 0: cout << "Sunday"; break;
-        case 1: cout << "Monday"; break;
-        case 2: cout << "Tuesday"; break;
-        case 3: cout << "Wednesday"; break;
-        case 4: cout << "Thursday"; break;
-        case 5: cout << "Friday"; break;
-        case 6: cout << "Saturday"; break;
+// int main() {
+//     for (int i = 1; i <= 100; i++) {
+//         if (i % 5 != 0) {
+//             cout << i << " ";
+//         }
+//     }
+// }
 
-    }
-}
+//problem 4
+// int main() {
+//     int maxnum;
+//     cin >> maxnum;
+//     for (int i = 1; i <= maxnum; i++) {
+//         if (i % 10 == 0) {cout<<i<<" ";}
+//     }
+// }
 
-//problem 20
+//problem 5
+// int main() {
+//
+//     for (char a = 'A'; a <= 'Z'; a++) {
+//
+//         if (a % 5 == 0 && a != 'A') {
+//             cout<<endl;
+//         }
+//         cout<<a<<" ";
+//     }
+//
+// }
+
+//problem 6
+
+// int main() {
+//
+//     float num_classes, credits, grade;
+//     float avg = 0;
+//     float totalcredits = 0;
+//     cout << "Enter number of classes: ";
+//     cin >> num_classes;
+//     for (int i = 1; i <= num_classes; i++) {
+//
+//         cout << "Class " << i << " credits: ";
+//         cin >> credits;
+//         cout << "Enter grade: ";
+//         cin >> grade;
+//         grade = credits*grade;
+//         avg += grade;
+//         totalcredits += credits;
+//
+//     }
+//
+//     avg /= totalcredits;
+//     cout <<"Your total GPA is: "<< round(avg * 100.0) / 100.0 << endl;
+// }
+
+//problem 7
+
+// int main() {
+//
+//     int number;
+//     cin >> number;
+//
+//     if (number % 2 == 0 && number != 2) {
+//         cout << "Not prime"<<endl;
+//         return 0;
+//     }
+//     else if (number <= 0) {cout << "Not prime"<<endl; return 0;}
+//     else if (number == 1 || number == 2) {
+//         cout << "Prime"<<endl;
+//         return 0;
+//     }
+//
+//     for (int i = 2; i < number; i++) {
+//         if (number % i == 0) {
+//             cout << "Not prime"<<endl;
+//             return 0;
+//         }
+//     }
+//
+//     cout << "Prime" << endl;
+//
+// }
+
+//problem 8
+
+// int main() {
+//
+//     int n;
+//     cin >> n;
+//
+// 	int reversed_number = 0;
+//
+// 	while (n != 0) {
+// 		int remainder = n % 10;
+// 		reversed_number = reversed_number * 10 + remainder;
+// 		n /= 10;
+// 	}
+//
+// 	cout << reversed_number << endl;
+//
+// }
+
+//problem 9
+
+// int main() {
+//
+//     int n;
+//     cin >> n;
+//
+//     for (int i = 1; i <= n; i++) {
+//         cout<<i<<"*"<<i<<"="<<i*i<<endl;
+//     }
+// }
+
+//problem 12
+
+// int main() {
+//
+// 	int num;
+// 	cin >> num;
+//
+// 	for (int i = 1; i <= num; i++) {
+// 		for (int j = 1; j <= num; j++) {
+// 			cout << "*";
+// 		}
+// 		cout << endl;
+// 	}
+//
+// }
+
+
+//problem 13
+
+ // int main() {
+ //
+ // 	int num;
+ // 	cin >> num;
+ //
+ // 	for (int i = 1; i <= num; i++) {
+ //
+ // 		for (int j = 1; j <= i; j++) {
+ // 			cout << "*";
+ // 		}
+ // 		cout << endl;
+ // 	}
+ //
+ // }
+
+//problem 14
+
+// int main() {
+//
+// 	int num;
+// 	cin >> num;
+//
+// 	if (num == 0) {cout << "The depth is 0" << endl; return 0;}
+//
+// 	for (int i = 1; i <= num; i++) {
+//
+// 		for (int j = 1; j <= i; j++) {
+// 			cout << i;
+// 		}
+// 		cout << endl;
+// 	}
+//
+// }
+
+//problem 15
+
+// int main() {
+//
+// 	double num;
+// 	cin >> num;
+// 	double sum = 0;
+//
+// 	for (double i = 1; i <= num; i++) {
+//
+// 		cout << 1 << "/" << i;
+// 		if (i != num) {
+// 			cout << " + ";
+// 		}
+// 		sum = sum+(1/i);
+// 	}
+// 	cout << endl;
+//
+// 	cout << "The sum is " << sum << endl;
+//
+// }
+
+//problem 16
+
+// int main() {
+//
+// 	double rent = 1000;
+// 	double total_rent = 0;
+//
+// 	for (int i = 1; i <= 5; i++) {
+//
+// 		cout << "For year number " << i <<", the rent is "<< rent << endl;
+// 		cout << "The total for year "<<i<<" is "<<12*rent << endl;
+// 		cout << endl;
+//
+// 		total_rent += rent*12;
+// 		rent *= 1.03;
+//
+// 	}
+//
+// 	cout << "For all 5 years, the total rent is "<< total_rent << endl;
+//
+// }
+
+//problem 18
+// #include <cmath>
 //
 // int main() {
 //
+//     int num;
+// 	cout << "Enter a binary number: ";
+// 	cin >> num;
 //
+// 	int remainder = 0;
+// 	int decimal = 0;
+// 	int power = 0;
+//
+// 	while (num != 0) {
+// 		remainder = num % 10;
+// 		num /= 10;
+// 		decimal += remainder * pow(2, power);
+// 		power++;
+// 	}
+//
+// 	cout << decimal << endl;
 //
 // }
+
+//problem 19
+
+// int main() {
+//
+//     int num;
+// 	cin >> num;
+//
+// 	while (num%2 == 0) {
+// 		cout << 2 <<" ";
+// 		num = num/2;
+// 	}
+//
+// 	for (int i = 3; i*i <= num; i+=2) {
+// 		if (num%i == 0) {
+// 			cout << i << " ";
+// 			num = num/i;
+// 		}
+// 	}
+//
+// 	if (num > 2) {
+// 		cout << num << " ";
+// 	}
+//
+// }
+
+//problem 20
+
+// #include <cmath>
+//
+// int main() {
+//
+//     int n;
+// 	cin >> n;
+//
+// 	// if (n != 10000 || n != 20000) {return 0;}
+//
+// 	double pi = 0;
+//
+// 	for (int i = 1; i <= n; i++) {
+//
+// 		pi += pow(-1, i-1) / (2*i-1);
+//
+// 	}
+//
+// 	cout << pi*4 << endl;
+//
+// }
+
+//problem 21
+
+// #include <unistd.h>
+//
+// int main() {
+//
+//     int n;
+// 	cout << "Enter the number of seconds: ";
+// 	cin >> n;
+//
+// 	for (int i = 1; i <= n; i++) {
+// 		cout << n-i << " seconds remaining" << endl;
+// 		sleep(1);
+// 	}
+//
+// }
+
+//problem 22
+
+// int main() {
+//
+//     cout << "Miles | Kilometers"<<endl;
+// 	for (int i = 1; i <= 10; i++) {
+// 		if (i == 10) {cout <<"  "<< i <<"  |   "<< i*1.609<<endl; break;}
+// 		cout <<"  "<< i << "   |   " << i*1.609 << endl;
+// 	}
+//
+// }
+
+//problem 23
+
+// #include <cmath>
+//
+// int main() {
+//
+// 	int n = 0;
+//
+//     while (pow(2, n) < 30000) {
+//     	n++;
+//     }
+//
+// 	if (pow(2, n) > 30000) {
+// 		cout << "The largest n such that 2^n < 30,000 is: " << n-1 << endl;
+// 	}
+//
+// }
+
+//problem 24
+
+#include <cstdlib>
+#include <ctime>
+
+int main() {
+
+	srand(static_cast<unsigned int>(time(0)));
+
+	int oddnumbers = 0;
+	int evennumbers = 0;
+
+    for (int i = 1; i <= 100000; i++) {
+
+    	int randint = rand();
+
+    	if (randint % 2 == 0) {
+    		evennumbers++;
+    	}
+    	else {
+    		oddnumbers++;
+    	}
+
+    }
+
+	cout << "Total number of even numbers: "<< evennumbers << endl;
+	cout << "Total number of odd numbers: "<< oddnumbers << endl;
+}
